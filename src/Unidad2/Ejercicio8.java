@@ -26,22 +26,57 @@ public class Ejercicio8 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        slDeslizador = new javax.swing.JSlider();
+        lblValor = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        slDeslizador.setMajorTickSpacing(50);
+        slDeslizador.setMaximum(500);
+        slDeslizador.setMinimum(100);
+        slDeslizador.setMinorTickSpacing(10);
+        slDeslizador.setOrientation(javax.swing.JSlider.VERTICAL);
+        slDeslizador.setPaintLabels(true);
+        slDeslizador.setPaintTicks(true);
+        slDeslizador.setValue(400);
+        slDeslizador.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                slDeslizadorStateChanged(evt);
+            }
+        });
+
+        lblValor.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblValor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(slDeslizador, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+                    .addComponent(lblValor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(slDeslizador, javax.swing.GroupLayout.DEFAULT_SIZE, 261, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(lblValor, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void slDeslizadorStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_slDeslizadorStateChanged
+        // TODO add your handling code here:
+        lblValor.setText("El valor es: " + slDeslizador.getValue());
+    }//GEN-LAST:event_slDeslizadorStateChanged
 
     /**
      * @param args the command line arguments
@@ -79,5 +114,7 @@ public class Ejercicio8 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel lblValor;
+    private javax.swing.JSlider slDeslizador;
     // End of variables declaration//GEN-END:variables
 }
