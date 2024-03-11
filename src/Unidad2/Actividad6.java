@@ -108,30 +108,32 @@ public class Actividad6 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 27, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnEsquina, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnCentro)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAgrandar)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnReducir)))
+                .addComponent(btnEsquina, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnCentro)
+                .addGap(18, 18, 18)
+                .addComponent(btnAgrandar)
+                .addGap(18, 18, 18)
+                .addComponent(btnReducir)
                 .addGap(23, 23, 23))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(158, 158, 158)
+                        .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addContainerGap(188, Short.MAX_VALUE)
                 .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 186, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnCentro)
@@ -149,7 +151,8 @@ public class Actividad6 extends javax.swing.JFrame {
 
     private void btnReducirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReducirActionPerformed
         // TODO add your handling code here:
-        lblNombre.setSize(80, 30);
+        Dimension size = lblNombre.getSize();
+        lblNombre.setSize(size.width - 5, size.height - 5);
     }//GEN-LAST:event_btnReducirActionPerformed
 
     private void btnEsquinaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEsquinaMouseEntered
@@ -194,22 +197,18 @@ public class Actividad6 extends javax.swing.JFrame {
 
     private void btnEsquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEsquinaActionPerformed
         // TODO add your handling code here:
-        lblNombre.setLocation(20, 20);
+        lblNombre.setLocation(getWidth() - lblNombre.getWidth()-20, 10);
     }//GEN-LAST:event_btnEsquinaActionPerformed
 
     private void btnCentroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCentroActionPerformed
         // TODO add your handling code here:
-        Dimension size = lblNombre.getSize();
-
-        int x = 400/2 - (size.width / 2);
-        int y = 300/2 - (size.height / 2);
-
-        lblNombre.setLocation(x, y);
+        lblNombre.setLocation((getWidth() - lblNombre.getWidth())/2, (getHeight() - lblNombre.getHeight())/2);
     }//GEN-LAST:event_btnCentroActionPerformed
 
     private void btnAgrandarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgrandarActionPerformed
         // TODO add your handling code here:
-        lblNombre.setSize(120, 60);
+        Dimension size = lblNombre.getSize();
+        lblNombre.setSize(size.width + 5, size.height + 5);
     }//GEN-LAST:event_btnAgrandarActionPerformed
 
     /**
