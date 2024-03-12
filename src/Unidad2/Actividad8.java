@@ -164,6 +164,7 @@ public class Actividad8 extends javax.swing.JFrame {
         lblTotalSinIva.setText("$ " + totalSinIva);
         lblIva.setText("$ " + iva);
         lblTotalMasIva.setText("$ " + totalMasIva);
+        
     }//GEN-LAST:event_btnCalcularActionPerformed
 
     /**
