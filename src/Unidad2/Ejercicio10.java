@@ -46,6 +46,11 @@ public class Ejercicio10 extends javax.swing.JFrame {
         jLabel2.setText("Calcular Área y Perímetro de un círculo");
 
         txtRadio.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtRadio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRadioActionPerformed(evt);
+            }
+        });
         txtRadio.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtRadioKeyPressed(evt);
@@ -144,6 +149,10 @@ public class Ejercicio10 extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_txtRadioKeyPressed
+
+    private void txtRadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRadioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtRadioActionPerformed
 
     /**
      * @param args the command line arguments
