@@ -9,12 +9,17 @@ package Unidad2;
  * @author Usuario
  */
 public class Ejercicio21 extends javax.swing.JFrame {
+    
+    double iva;
+    double descuento;
 
     /**
      * Creates new form Ejercicio21
      */
     public Ejercicio21() {
         initComponents();
+        iva = 0;
+        descuento = 0;
     }
 
     /**
@@ -26,21 +31,218 @@ public class Ejercicio21 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        dialogoConfiguracion = new javax.swing.JDialog();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        txtIva = new javax.swing.JTextField();
+        txtDescuento = new javax.swing.JTextField();
+        btnAceptar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        lblUnidades = new javax.swing.JLabel();
+        lblPrecio = new javax.swing.JLabel();
+        txtUnidades = new javax.swing.JTextField();
+        txtPrecio = new javax.swing.JTextField();
+        lblTotal = new javax.swing.JLabel();
+        etiTotal = new javax.swing.JLabel();
+        btnCalcular = new javax.swing.JButton();
+        btnConfiguración = new javax.swing.JButton();
+
+        dialogoConfiguracion.setTitle("Configuración de Iva de Descuento");
+        dialogoConfiguracion.setAlwaysOnTop(true);
+        dialogoConfiguracion.setModal(true);
+
+        jLabel2.setText("IVA %:");
+
+        jLabel3.setText("DESCUENTO %:");
+
+        txtIva.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtIva.setText("0");
+        txtIva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIvaActionPerformed(evt);
+            }
+        });
+
+        txtDescuento.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtDescuento.setText("0");
+        txtDescuento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDescuentoActionPerformed(evt);
+            }
+        });
+
+        btnAceptar.setText("Aceptar");
+        btnAceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAceptarActionPerformed(evt);
+            }
+        });
+
+        btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout dialogoConfiguracionLayout = new javax.swing.GroupLayout(dialogoConfiguracion.getContentPane());
+        dialogoConfiguracion.getContentPane().setLayout(dialogoConfiguracionLayout);
+        dialogoConfiguracionLayout.setHorizontalGroup(
+            dialogoConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoConfiguracionLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(dialogoConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnAceptar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addGroup(dialogoConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtIva)
+                    .addComponent(txtDescuento)
+                    .addComponent(btnCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE))
+                .addGap(24, 24, 24))
+        );
+        dialogoConfiguracionLayout.setVerticalGroup(
+            dialogoConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoConfiguracionLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(dialogoConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtIva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(dialogoConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtDescuento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(dialogoConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAceptar)
+                    .addComponent(btnCancelar))
+                .addContainerGap(22, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("Martínez Mendoza Jesús Ángel");
+
+        lblUnidades.setText("Unidades");
+
+        lblPrecio.setText("Precio");
+
+        txtUnidades.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        txtPrecio.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        lblTotal.setText("TOTAL:");
+
+        etiTotal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        etiTotal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        btnCalcular.setText("Calcular");
+        btnCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularActionPerformed(evt);
+            }
+        });
+
+        btnConfiguración.setText("Configuración");
+        btnConfiguración.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConfiguraciónActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblUnidades)
+                            .addComponent(lblPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblTotal)
+                            .addComponent(btnCalcular))
+                        .addGap(52, 52, 52)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtUnidades)
+                            .addComponent(txtPrecio)
+                            .addComponent(etiTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnConfiguración, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblUnidades)
+                    .addComponent(txtUnidades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblPrecio)
+                    .addComponent(txtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblTotal)
+                    .addComponent(etiTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCalcular)
+                    .addComponent(btnConfiguración))
+                .addGap(36, 36, 36)
+                .addComponent(jLabel1)
+                .addContainerGap())
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnConfiguraciónActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguraciónActionPerformed
+        dialogoConfiguracion.setSize(300, 200);
+        dialogoConfiguracion.setLocationRelativeTo(null); // dialogoConfiguracion.setLocation(100,100)
+        dialogoConfiguracion.setVisible(true);
+    }//GEN-LAST:event_btnConfiguraciónActionPerformed
+
+    private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
+        // TODO add your handling code here:
+        double unidades, precio, total, cantIva, cantDes, totalSinIva;
+        
+        unidades = Double.parseDouble(txtUnidades.getText());
+        precio = Double.parseDouble(txtPrecio.getText());
+        
+        totalSinIva = precio * unidades;
+        cantIva = totalSinIva * iva/100;
+        cantDes = totalSinIva * descuento/100;
+        
+        total = totalSinIva + cantIva - cantDes;
+        
+        etiTotal.setText("" + total);
+    }//GEN-LAST:event_btnCalcularActionPerformed
+
+    private void txtDescuentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescuentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDescuentoActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        dialogoConfiguracion.dispose();
+    }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
+        iva = Double.parseDouble(txtIva.getText());
+        descuento = Double.parseDouble(txtDescuento.getText());
+        dialogoConfiguracion.dispose();
+    }//GEN-LAST:event_btnAceptarActionPerformed
+
+    private void txtIvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIvaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIvaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +280,21 @@ public class Ejercicio21 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAceptar;
+    private javax.swing.JButton btnCalcular;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnConfiguración;
+    private javax.swing.JDialog dialogoConfiguracion;
+    private javax.swing.JLabel etiTotal;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lblPrecio;
+    private javax.swing.JLabel lblTotal;
+    private javax.swing.JLabel lblUnidades;
+    private javax.swing.JTextField txtDescuento;
+    private javax.swing.JTextField txtIva;
+    private javax.swing.JTextField txtPrecio;
+    private javax.swing.JTextField txtUnidades;
     // End of variables declaration//GEN-END:variables
 }
